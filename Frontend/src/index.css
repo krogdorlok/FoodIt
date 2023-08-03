@@ -1,0 +1,15 @@
+body {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+font1 {
+  font-family: "Century Gothic",Verdana,sans-serif;
+}
+
+#carousel{
+  max-height: 300px;
+}

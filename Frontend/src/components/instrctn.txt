@@ -1,0 +1,3 @@
+These files which are included in the componenets part 
+are made such that these files or these "components" can 
+be reused in other sections of the web page so formed.
