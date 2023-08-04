@@ -10,7 +10,8 @@ export default function Signup() {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         console.log(JSON.stringify({name:information.name, email:information.email, password:information.password, location:information.geolocation}));
-        const response = await fetch("http://localhost:8000/api/createuser",{//POST fetch api is an inbuilt function
+        // const response = await fetch("http://localhost:8000/api/createuser",{//POST fetch api is an inbuilt function
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}`/api/createuser`,{
         method:'POST',
         headers: {
             'Content-Type':'application/json'

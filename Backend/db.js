@@ -1,6 +1,9 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 const mongoose = require("mongoose");
-const mongoURI =
-  "mongodb+srv://eshaankapoor:ENK81gHLibAXZPiV@cluster0.s99wv3y.mongodb.net/khaanakhilado?retryWrites=true&w=majority";
+const mongoURI = process.env.MONGODB_URI;
+
 const mongoDB = async () => {
   await mongoose.connect(
     mongoURI,
@@ -35,16 +38,5 @@ const mongoDB = async () => {
     }
   );
 };
-
-// const mongoDB = async () => {
-//   try {
-//     const connection = await mongoose.connect(
-//       "mongodb+srv://eshaankapoor:ENK81gHLibAXZPiV@cluster0.s99wv3y.mongodb.net/khaanakhilado?retryWrites=true&w=majority"
-//     );
-//     console.log(`database connected: ${connection.connection.host}`);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
 
 module.exports = mongoDB;
