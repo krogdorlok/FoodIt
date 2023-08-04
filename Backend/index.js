@@ -7,6 +7,8 @@ const port = 8000;
 const mongoDB = require("./db");
 mongoDB();
 
+const cors = require("cors");
+
 app.use;
 cors({
   origin: [`${process.env.FRONTEND_URL}`],
