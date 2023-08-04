@@ -9,7 +9,8 @@ node_modules
 /coverage
 
 # production
-/build
+/Frontend/build
+
 
 # misc
 .DS_Store
@@ -24,5 +25,5 @@ yarn-error.log*
 
 
 # Dependencies
-Backend/node_modules
-Frontend/node_modules
+/Backend/node_modules
+/Frontend/node_modules
