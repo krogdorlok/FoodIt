@@ -16,7 +16,7 @@ export default function Home() {
   const loadData = async () => {
     // let response = await fetch("http://localhost:8000/api/foodData", {
     let response = fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/api/auth/orderData`,
+      `https://foodit-backend.onrender.com/api/auth/orderData`,
       {
         method: "POST",
         headers: {
