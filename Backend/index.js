@@ -9,14 +9,18 @@ mongoDB();
 
 const cors = require("cors");
 
-app.use;
-cors({
-  origin: [`${process.env.FRONTEND_URL}`],
-});
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+    optionsSuccessStatus: 204,
+  })
+);
 
 app.use((req, res, next) => {
   // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+  res.setHeader("Access-Control-Allow-Origin", `${process.env.FRONTEND_URL}`);
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept, Authentication"
